@@ -180,6 +180,7 @@ img { max-width: 100%; display: block; }
   gap: 48px;
 }
 
+.hero-image,
 .hero-backdrop {
   position: absolute;
   inset: 0 0 0 0;
