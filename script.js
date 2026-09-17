@@ -1,27 +1,86 @@
-const CONFIG={roblox:'https://www.roblox.com/',discord:'https://discord.gg/yxjXcUg32K',owners:['mateomiranda314@gmail.com','mateomiranda4321@gmail.com']};
-const IMAGES={hero:'https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=2200&q=85',city:'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1200&q=80',map:'https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&w=1400&q=80',police:'https://images.unsplash.com/photo-1526725702345-bdda2b97ef73?auto=format&fit=crop&w=900&q=80',road:'https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=900&q=80',fire:'https://images.unsplash.com/photo-1581529361335-5c6a4f2f8b79?auto=format&fit=crop&w=900&q=80',ems:'https://images.unsplash.com/photo-1587745416684-47953f16f02f?auto=format&fit=crop&w=900&q=80',team:'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=500&q=80',city2:'https://images.unsplash.com/photo-1494522358652-f30e61a60313?auto=format&fit=crop&w=1000&q=80',car:'https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1000&q=80',night:'https://images.unsplash.com/photo-1493238792000-8113da705763?auto=format&fit=crop&w=1000&q=80'};
-const departments=[['SWAT','Special Weapons & Tactics','Preparados para las situaciones críticas.','police','#94a3b8','Táctico · Rescate · Crisis','https://i.ytimg.com/vi/XonSfaDiq4o/maxresdefault.jpg'],['FBI','Federal Bureau of Investigation','Inteligencia para los casos que cruzan límites.','city','#60a5fa','Federal · Inteligencia · Operaciones','https://tse3.mm.bing.net/th/id/OIP.xXCQQyF32phRbVLrRhNJ7wHaGo?r=0&rs=1&pid=ImgDetMain&o=7&rm=3'],['LSPD','Los Santos Police Department','Protegemos la ciudad, una llamada a la vez.','police','#38bdf8','Patrulla · Respuesta · Investigación','https://static.wikia.nocookie.net/failyv/images/6/67/LOGO_LSPD_HD.png/revision/latest/scale-to-width-down/1200?cb=20220823113855&path-prefix=fr'],['FIRE','Los Santos Fire & Rescue','Entramos donde otros no pueden.','fire','#f97316','Incendios · Rescate · Prevención','https://tse1.mm.bing.net/th/id/OIP.dr6xRhSZcYFa8t43BN0dpQHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3'],['EMS','Emergency Medical Services','Cada segundo cuenta cuando alguien necesita ayuda.','ems','#ef4444','Rescate · Trauma · Ambulancia','https://wiki.eclipse-rp.net/images/2/2a/MD_Logo.png']];
-const vehicles=[['Vapid Stanier','Civiles','4 puertas · Sedán','95 KM/H',' $18,500','car'],['Bravado Buffalo','Civiles','4 puertas · Deportivo','142 KM/H','$42,000','night'],['LSPD Cruiser','LSPD','Unidad · Patrulla','138 KM/H','Servicio','police'],['LSPD Interceptor','LSPD','Unidad · Pursuit','165 KM/H','Servicio','night'],['Ambulance Rescue','EMS','Rescate · Emergencias','110 KM/H','Servicio','ems'],['Firetruck Engine','Especial','Rescate · Bomberos','92 KM/H','Servicio','fire'],['Sanchez Patrol','Especial','Moto · Dual sport','128 KM/H','Servicio','road'],['Speedtail X','Civiles','2 puertas · Premium','198 KM/H','$185,000','car']];
-const news=[['ACTUALIZACIÓN','La ciudad se prepara para su próxima etapa.','Nuevas calles, nuevos sistemas y más historias para vivir en Los Santos.','12.08.26','city2'],['ANUNCIO','Convocatoria: unidades de respuesta','Los departamentos abren sus puertas a nuevos miembros de la comunidad.','08.08.26','police'],['EVENTO','Noche de Los Santos','Una noche, toda la ciudad. Música, luces y una celebración para todos.','01.08.26','night']];
-const events=[['24 AGO','Noche de Los Santos','Downtown Los Santos','Comunidad reunida, luces encendidas.'],['30 AGO','Operativo Costa Segura','Vespucci Beach','Una jornada especial para las unidades de emergencia.'],['07 SEP','Apertura de Academia','Mission Row','Tu primer paso para formar parte del servicio.']];
-const staff=[['Alex Rivera','OWNER','Dirección y visión','team','#f59e0b'],['Mia Santos','DESARROLLADOR','Sistemas y experiencias','team','#38bdf8'],['Nico Reyes','ADMINISTRADOR','Comunidad y operaciones','team','#38bdf8'],['Luna Torres','CREADOR DE CONTENIDO','Historias desde Los Santos','team','#38bdf8']];
-const tuning=['Motor','Turbo','Escape','Frenos','Suspensión','Transmisión','Ruedas','Neumáticos','Spoilers','Sirenas','Pintura','Matrículas'];
-const rules=[['Normativa General','Respetá a los demás jugadores y mantené una actitud que ayude a construir una comunidad sana.'],['RolePlay','Interpretá a tu personaje con coherencia. El metajuego y el powergaming rompen la experiencia.'],['Vehículos','Conducí de forma responsable y respetá las escenas activas de otros jugadores.'],['Policía y emergencias','Las unidades de servicio deben priorizar el RolePlay y seguir la cadena de mando.'],['Sanciones','Las faltas pueden resultar en advertencias, expulsiones temporales o permanentes.']];
-const achievements=['Primer ingreso','Primer turno policial','Primera emergencia','Primer incendio','Primer vehículo','Veterano','Primer gran ahorro','Habitante de Los Santos'];
-const shop=[['Gamepass','Acceso Premium','Beneficios exclusivos dentro de la ciudad.','Robux'],['Vehículo Premium','Colección CR:LS','Una máquina para cada historia.','Robux'],['Beneficio','Placa personalizada','Tu identidad también se ve en la calle.','Robux'],['Productos','Pack de bienvenida','Todo lo necesario para comenzar.','Robux']];
-function image(key){return IMAGES[key]||IMAGES.city}
-function renderDepartments(){document.querySelector('#department-grid').innerHTML=departments.map(d=>`<article class="department-card reveal" style="--accent:${d[4]}"><div class="card-image" style="background-image:url('${d[6]}')"></div><span class="dept-code">${d[0]}</span><h3>${d[1]}</h3><p>${d[2]}</p><div class="dept-meta"><span>${d[5].split(' · ')[0]}</span><span>${d[5].split(' · ')[1]}</span></div></article>`).join('')}
-function renderVehicles(list=vehicles){const grid=document.querySelector('#vehicle-grid');grid.innerHTML=list.length?list.map((v,i)=>`<article class="vehicle-card reveal" data-index="${vehicles.indexOf(v)}"><div class="vehicle-card-image" style="background-image:url('${image(v[5])}')"></div><div class="vehicle-card-body"><p>${v[1]} / ${v[2]}</p><h3>${v[0]}</h3><div class="vehicle-price"><span>${v[4]}</span><span>Disponible</span></div></div></article>`).join(''):'<p class="heading-note">No encontramos vehículos con esa búsqueda.</p>';grid.querySelectorAll('.vehicle-card').forEach(card=>card.addEventListener('click',()=>openVehicle(vehicles[card.dataset.index])));observeReveals()}
-function openVehicle(v){document.querySelector('#modal-image').style.backgroundImage=`url('${image(v[5])}')`;document.querySelector('#modal-category').textContent=`${v[1]} / ${v[2]}`;document.querySelector('#modal-title').textContent=v[0];document.querySelector('#modal-description').textContent='Una unidad diseñada para moverse por Los Santos con personalidad, respuesta y presencia.';document.querySelector('#modal-specs').innerHTML=[['Velocidad',v[3]],['Aceleración','Alta'],['Manejo','Preciso'],['Estado',v[4]]].map(s=>`<div>${s[0]}<b>${s[1]}</b></div>`).join('');document.querySelector('#vehicle-modal').classList.add('open');document.querySelector('#vehicle-modal').setAttribute('aria-hidden','false')}
-function renderNews(){document.querySelector('#news-grid').innerHTML=news.map(n=>`<article class="news-card reveal"><div class="news-image" style="background-image:url('${image(n[4])}')"></div><div class="news-body"><span class="badge">${n[0]}</span><h3>${n[1]}</h3><p>${n[2]}</p><div class="news-footer"><span>${n[3]}</span><a href="#comunidad">Leer más →</a></div></div></article>`).join('')}
-function renderEvents(){document.querySelector('#event-list').innerHTML=events.map(e=>`<article class="event-card reveal"><div class="event-date"><small>2026</small>${e[0]}</div><div><h3>${e[1]}</h3><p>${e[2]} · ${e[3]}</p></div><span class="event-status">Próximo</span></article>`).join('')}
-function renderSpoilers(){const items=[['Nuevo distrito','Más ciudad. Más posibilidades.','city2'],['Proyecto: unidades aéreas','El cielo también forma parte de la respuesta.','night'],['Próxima temporada','Una nueva historia está por comenzar.','police']];document.querySelector('#spoiler-grid').innerHTML=items.map(s=>`<article class="spoiler-card locked reveal" style="background-image:url('${image(s[2])}')"><div class="spoiler-content"><span>🔒</span><h3>Contenido bloqueado</h3><p>${s[0]}</p><button class="spoiler-button">Mostrar spoiler</button></div></article>`).join('');document.querySelectorAll('.spoiler-button').forEach(b=>b.addEventListener('click',e=>{const card=e.target.closest('.spoiler-card');card.classList.add('revealed');card.querySelector('h3').textContent=card.querySelector('p').textContent;card.querySelector('p').textContent='Próximamente en CR:LS.'}))}
-function renderStaff(){document.querySelector('#staff-grid').innerHTML=staff.map(s=>`<article class="staff-card reveal" style="--accent:${s[4]}"><div class="avatar" style="background-image:url('${image(s[3])}')"></div><span class="role">${s[1]}</span><h3>${s[0]}</h3><p>${s[2]}</p></article>`).join('')}
-function renderTuning(){document.querySelector('#tuning-list').innerHTML=tuning.map((t,i)=>`<span class="tuning-item"><b>${String(i+1).padStart(2,'0')}</b>${t}</span>`).join('')}
-function renderRules(){document.querySelector('#rules-list').innerHTML=rules.map(r=>`<article class="rule"><button class="rule-toggle" aria-expanded="false">${r[0]}<span>+</span></button><div class="rule-content"><div><p>${r[1]}</p></div></div></article>`).join('');document.querySelectorAll('.rule-toggle').forEach(b=>b.addEventListener('click',()=>{const rule=b.parentElement;rule.classList.toggle('open');b.setAttribute('aria-expanded',rule.classList.contains('open'))}))}
-function renderAchievements(){document.querySelector('#achievement-grid').innerHTML=achievements.map((a,i)=>`<article class="achievement reveal"><b>${['✦','◈','✚','△','◇','★','◉','⌂'][i]}</b><h3>${a}</h3><p>Logro de ciudad / 0${i+1}</p></article>`).join('')}
-function renderShop(){document.querySelector('#shop-grid').innerHTML=shop.map(s=>`<article class="shop-card reveal"><span class="shop-icon">◇</span><h3>${s[0]}</h3><p>${s[1]}<br>${s[2]}</p><strong class="price">${s[3]}</strong><a class="button button-outline" href="${CONFIG.roblox}" target="_blank" rel="noreferrer">Ver producto ↗</a></article>`).join('')}
-function ownerAction(type){const email=prompt('Ingresá tu correo de propietario para publicar:');if(!email||!CONFIG.owners.includes(email.trim().toLowerCase())){alert('Acceso denegado.');return}const modal=document.querySelector('#owner-modal');modal.dataset.type=type;document.querySelector('#owner-modal-title').textContent=type==='eventos'?'Publicar evento':type==='noticias'?'Publicar noticia':'Publicar contenido';document.querySelector('#owner-image-field').style.display=type==='eventos'?'none':'grid';document.querySelector('#owner-date-field').style.display=type==='eventos'?'grid':'none';document.querySelector('#owner-form').reset();document.querySelector('#owner-error').textContent='';modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.querySelector('#owner-title').focus()}
-function publishOwnerContent(event){event.preventDefault();const form=event.currentTarget;const modal=document.querySelector('#owner-modal');const type=modal.dataset.type;const title=document.querySelector('#owner-title').value.trim();const description=document.querySelector('#owner-description').value.trim();const imageUrl=document.querySelector('#owner-image').value.trim();const date=document.querySelector('#owner-date').value;if(type!=='eventos'&&!imageUrl){document.querySelector('#owner-error').textContent='Agregá una URL de foto para publicar.';return}if(type==='eventos'&&!date){document.querySelector('#owner-error').textContent='Elegí una fecha para el evento.';return}const target=type==='noticias'?'#noticias':type==='eventos'?'#eventos':'#spoilers';const section=document.querySelector(target);const empty=section.querySelector('.owner-empty');if(empty)empty.remove();const article=document.createElement('article');article.className=type==='eventos'?'event-card reveal visible':type==='noticias'?'news-card reveal visible':'spoiler-card reveal visible';if(type==='eventos'){article.innerHTML=`<div class="event-date"><small>${new Date(`${date}T00:00:00`).getFullYear()}</small>${new Date(`${date}T00:00:00`).toLocaleDateString('es-AR',{day:'2-digit',month:'short'}).toUpperCase()}</div><div><h3>${title}</h3><p>${description}</p></div><span class="event-status">Próximo</span>`;section.querySelector('.event-list')?.append(article)}else if(type==='noticias'){article.innerHTML=`<div class="news-image" style="background-image:url('${imageUrl}')"></div><div class="news-body"><span class="badge">PUBLICACIÓN</span><h3>${title}</h3><p>${description}</p><div class="news-footer"><span>AHORA</span><span>CR:LS</span></div></div>`;let grid=section.querySelector('.news-grid');if(!grid){grid=document.createElement('div');grid.className='news-grid';section.append(grid)}grid.prepend(article)}else{article.style.backgroundImage=`url('${imageUrl}')`;article.innerHTML=`<div class="spoiler-content"><h3>${title}</h3><p>${description}</p></div>`;let grid=section.querySelector('.spoiler-grid');if(!grid){grid=document.createElement('div');grid.className='spoiler-grid';section.append(grid)}grid.prepend(article)}modal.classList.remove('open');modal.setAttribute('aria-hidden','true');form.reset()}
-function observeReveals(){const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.08});document.querySelectorAll('.reveal:not(.visible)').forEach(el=>observer.observe(el))}
-document.addEventListener('DOMContentLoaded',()=>{renderDepartments();observeReveals();const header=document.querySelector('.site-header');window.addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>30));const menu=document.querySelector('.site-menu');document.querySelector('.menu-toggle').addEventListener('click',e=>{const open=menu.classList.toggle('open');e.currentTarget.setAttribute('aria-expanded',open)});document.querySelectorAll('.site-menu>a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));document.querySelectorAll('.owner-action').forEach(button=>button.addEventListener('click',()=>ownerAction(button.dataset.ownerType)));document.querySelector('#owner-form').addEventListener('submit',publishOwnerContent);document.querySelectorAll('.owner-close').forEach(button=>button.addEventListener('click',()=>{const modal=document.querySelector('#owner-modal');modal.classList.remove('open');modal.setAttribute('aria-hidden','true')}));document.querySelector('#owner-modal').addEventListener('click',event=>{if(event.target.id==='owner-modal')event.currentTarget.classList.remove('open')});const sitePath='/City-Response-Los-Santos';const normalizedPath=location.pathname.replace(/\/+$/,'');const isKnownPage=normalizedPath===''||normalizedPath==='/index.html'||normalizedPath===sitePath||normalizedPath===`${sitePath}/index.html`;if(!isKnownPage)document.querySelector('#not-found').classList.add('show')});
+const CONFIG = {
+  roblox: 'https://www.roblox.com/',
+  discord: 'https://discord.gg/yxjXcUg32K',
+  owners: ['mateomiranda314@gmail.com', 'mateomiranda4321@gmail.com']
+};
+
+const departments = [
+  ['SWAT', 'Special Weapons & Tactics', 'Preparados para las situaciones críticas.', 'Táctico · Rescate · Crisis', 'https://i.ytimg.com/vi/XonSfaDiq4o/maxresdefault.jpg'],
+  ['FBI', 'Federal Bureau of Investigation', 'Inteligencia para los casos que cruzan límites.', 'Federal · Inteligencia · Operaciones', 'https://tse3.mm.bing.net/th/id/OIP.xXCQQyF32phRbVLrRhNJ7wHaGo?r=0&rs=1&pid=ImgDetMain&o=7&rm=3'],
+  ['LSPD', 'Los Santos Police Department', 'Protegemos la ciudad, una llamada a la vez.', 'Patrulla · Respuesta · Investigación', 'https://static.wikia.nocookie.net/failyv/images/6/67/LOGO_LSPD_HD.png/revision/latest/scale-to-width-down/1200?cb=20220823113855&path-prefix=fr'],
+  ['FIRE', 'Urban District Fire & Rescue', 'Entramos donde otros no pueden.', 'Incendios · Rescate · Prevención', 'https://tse1.mm.bing.net/th/id/OIP.dr6xRhSZcYFa8t43BN0dpQHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3'],
+  ['EMS', 'Emergency Medical Services', 'Cada segundo cuenta cuando alguien necesita ayuda.', 'Rescate · Trauma · Ambulancia', 'https://wiki.eclipse-rp.net/images/2/2a/MD_Logo.png']
+];
+
+function renderDepartments() {
+  const grid = document.querySelector('#department-grid');
+  if (!grid) return;
+  grid.innerHTML = departments.map((department) => `
+    <article class="department-card reveal">
+      <div class="card-image" style="background-image:url('${department[4]}')"></div>
+      <span class="dept-code">${department[0]}</span>
+      <h3>${department[1]}</h3>
+      <p>${department[2]}</p>
+      <div class="dept-meta"><span>${department[3].split(' · ')[0]}</span><span>${department[3].split(' · ')[1]}</span></div>
+    </article>
+  `).join('');
+}
+
+function setupOwnerPublishing() {
+  const modal = document.querySelector('#owner-modal');
+  const form = document.querySelector('#owner-form');
+  if (!modal || !form) return;
+
+  document.querySelectorAll('.owner-action').forEach((button) => {
+    button.addEventListener('click', () => {
+      const email = window.prompt('Ingresá tu correo de propietario para publicar:');
+      if (!email || !CONFIG.owners.includes(email.trim().toLowerCase())) {
+        window.alert('Acceso denegado.');
+        return;
+      }
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden', 'false');
+      form.reset();
+      document.querySelector('#owner-title')?.focus();
+    });
+  });
+
+  document.querySelectorAll('.owner-close').forEach((button) => {
+    button.addEventListener('click', () => {
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+    });
+  });
+
+  modal.addEventListener('click', (event) => {
+    if (event.target === modal) modal.classList.remove('open');
+  });
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const error = document.querySelector('#owner-error');
+    if (error) error.textContent = 'Contenido preparado para publicar.';
+    form.reset();
+  });
+}
+
+function setupNavigation() {
+  const menu = document.querySelector('.site-menu');
+  const toggle = document.querySelector('.menu-toggle');
+  if (!menu || !toggle) return;
+  toggle.addEventListener('click', () => {
+    const isOpen = menu.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(isOpen));
+  });
+  document.querySelectorAll('.site-menu > a').forEach((link) => {
+    link.addEventListener('click', () => menu.classList.remove('open'));
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  renderDepartments();
+  setupOwnerPublishing();
+  setupNavigation();
+  const header = document.querySelector('.site-header');
+  window.addEventListener('scroll', () => header?.classList.toggle('scrolled', window.scrollY > 30));
+});
